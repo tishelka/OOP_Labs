@@ -1,0 +1,12 @@
+﻿@model YourNamespace.Models.GameEntity
+
+<h1>Delete Game @Model.Id</h1>
+
+<p>Are you sure you want to delete this game?</p>
+
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Delete</button>
+</form>
+
+<a href="/Game">Cancel</a>

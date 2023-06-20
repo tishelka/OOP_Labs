@@ -1,0 +1,14 @@
+﻿@model YourNamespace.Models.GameEntity
+
+<h1>Create New Game</h1>
+
+<form asp-action="Create">
+    <div>
+        <label for="Pot">Pot:</label>
+        <input asp-for="Pot" />
+    </div>
+
+    <button type="submit">Create</button>
+</form>
+
+<a href="/Game">Cancel</a>

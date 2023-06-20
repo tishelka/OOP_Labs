@@ -1,0 +1,28 @@
+﻿@model IEnumerable<YourNamespace.Models.GameEntity>
+
+<h1>Games</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Pot</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var game in Model)
+        {
+            <tr>
+                <td>@game.Id</td>
+                <td>@game.Pot</td>
+                <td>
+                    <a href="/Game/Details/@game.Id">Details</a> | 
+                    <a href="/Game/Delete/@game.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Game/Create">Create New Game</a>
